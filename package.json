@@ -1,0 +1,24 @@
+{
+  "name": "mambourin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "crawl": "node crawl.js",
+    "postprocess": "node postprocess.js",
+    "fix": "node fix2.js",
+    "build": "node crawl.js && node postprocess.js && node fix2.js",
+    "serve": "npx serve dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://local_proxy@127.0.0.1:35257/git/ahthi/mambourin"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.2.0"
+  }
+}
