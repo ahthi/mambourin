@@ -1,0 +1,71 @@
+/* Static site patches for Mambourin Marketplace */
+
+/* Carousel buttons injected by static-fixes.js */
+.fpa-static-carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  padding: 0.2em 0.5em;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 3px;
+  user-select: none;
+}
+
+.fpa-carousel__prev.fpa-static-carousel-btn { left: 0.5rem; }
+.fpa-carousel__next.fpa-static-carousel-btn { right: 0.5rem; }
+.fpa-carousel { position: relative; overflow: hidden; }
+
+/* Make sure fpa-carousel slides that are hidden stay hidden */
+.fpa-carousel__slide[style*="display: none"],
+.fpa-carousel__slide[style*="display:none"] {
+  display: none !important;
+}
+
+/* Mega menu open state */
+.fpa-retail-header__nav-item--has-children.is-open > .fpa-retail-header__dropdown,
+.has-children.is-open > .dropdown,
+.has-dropdown.is-open > .sub-nav {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Mobile nav open state */
+.fpa-retail-header__navigation.is-open,
+.fpa-retail-header__nav.is-open,
+.mobile-nav.is-open {
+  display: block !important;
+}
+
+/* Static contact / newsletter form */
+.fpa-static-form input,
+.fpa-static-form textarea,
+.fpa-static-form select {
+  box-sizing: border-box;
+}
+
+/* Store filter active state */
+.fpa-store-filter__btn.is-active,
+.store-category-btn.is-active {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* Search fallback notice */
+.search-static-fallback {
+  padding: 2rem;
+  text-align: center;
+  font-family: inherit;
+}
+
+/* Remove broken Sitecore experience form wrappers that may have been partially stripped */
+.sfContentBlock:empty,
+[data-sc-fxb]:empty {
+  display: none;
+}
